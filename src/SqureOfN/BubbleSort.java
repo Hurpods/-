@@ -40,7 +40,7 @@ public class BubbleSort {
     }
 
     //鸡尾酒排序，是冒泡排序的变种，与冒泡排序不同点在于每一趟外循环中内嵌两个循环，一次从数组头将最大值移动到尾，一次从数组尾将最小值移动到头，减少移动次数
-    public static void CockTailSort(int[] array) {
+    private static void CockTailSort(int[] array) {
         long startTime = System.nanoTime();
 
         //由于每一次外循环都将从数组头和数组尾都进行移动数据，因此只需要进行数组长度一半的遍历次数就可以完成排序
@@ -73,9 +73,9 @@ public class BubbleSort {
         System.out.println("CockTailSort:" + runTime + "ms");
     }
 
-    public static void swap(int[] a, int i, int j) {
-        a[i] = a[i] ^ a[j];
-        a[j] = a[i] ^ a[j];
-        a[i] = a[i] ^ a[j];
+    private static void swap(int[]a,int i,int j){
+        int temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
     }
 }
