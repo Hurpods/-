@@ -41,10 +41,8 @@ public class QuickSort {
             int pivot = median3(array, left, right);
             int i = left, j = right - 1;
             while (true) {
-                while (array[++i] < pivot) {
-                }
-                while (j>left&&array[--j] > pivot) {
-                }
+                while (array[++i] < pivot) { }
+                while (j>left&&array[--j] > pivot) { }
                 if (i < j) {
                     swap(array, i, j);
                 } else {
